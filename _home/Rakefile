@@ -2,7 +2,7 @@ require 'bundler'
 
 Bundler.require
 
-ROOT_PATH = File.dirname(__FILE__)
+ROOT_PATH = Pathname File.dirname(__FILE__)
 
 require_relative 'lib/sass_config'
 require_relative 'lib/core_ext'
@@ -12,5 +12,18 @@ require_relative 'lib/server'
 
 desc "Start the server"
 task :server do
-  Server.new(ROOT_PATH).start
+  Server.start do |builder|
+    builder.map('/assets') { run AssetPipeline.new(ROOT_PATH) }
+    builder.map('/')       { run SlimTemplate.new(ROOT_PATH)  }
+  end
 end
+
+desc "Compile homepage"
+task :compile do
+  slim = SlimTemplate.new ROOT_PATH
+  slim.compile_to '..'
+
+  sprockets = AssetPipeline.new ROOT_PATH
+  sprockets.compile_to '../assets'
+end
+

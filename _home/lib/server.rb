@@ -1,14 +1,11 @@
-class Server
-  def initialize(path)
-    @builder = Rack::Builder.new do
+module Server
+  def self.start(port = 3000)
+    builder = Rack::Builder.new do
       use Rack::CommonLogger
-
-      map('/assets') { run AssetPipeline.new(path) }
-      map('/')       { run SlimTemplate.new(path)  }
     end
-  end
 
-  def start(port = 3000)
+    yield builder
+
     server = Rack::Handler::WEBrick
 
     trap(:INT) do
@@ -19,6 +16,6 @@ class Server
       end
     end
 
-    server.run @builder, :Port => port
+    server.run builder, :Port => port
   end
 end
