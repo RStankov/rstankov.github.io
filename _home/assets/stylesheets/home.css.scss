@@ -1,0 +1,129 @@
+@import "compass/css3";
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+
+@mixin text-font($size) {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: $size;
+  line-height: $size+2;
+}
+
+@mixin header-font($size) {
+  font-family: "Lucida Grande", Arial, sans-serif;
+  font-size: $size;
+  line-height: $size+2;
+  text-shadow: 1px 1px 1px white;
+}
+
+@mixin clear-after {
+  *zoom: 1;
+
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+  }
+}
+
+$border-color: silver;
+$content-color: #fefffe;
+$header-color: #e6efff;
+
+body {
+  @include text-font(16px);
+  background: #d2d2d2 url("/assets/background.png");
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+article {
+  @include border-radius(5px);
+  @include box-shadow(0 0 7px #555555);
+
+  width: 90%;
+  min-width: 310px;
+  max-width: 440px;
+  margin: 20px auto;
+  padding-bottom: 20px;
+  background: $content-color;
+  border: 1px solid #eeeeee;
+
+  header { @include clearfix; @include border-radius(5px 5px 0 0); padding: 20px; background: $header-color; border-bottom: 1px solid $border-color; }
+  header img { @include border-radius(100%); @include box-shadow(0px 0px 1px 5px rgba(255, 255, 255, 0.6)); float: left; margin-right: 18px; }
+
+  header h1 { @include header-font(30px); margin-top: 20px; }
+  header h2 { @include header-font(18px); margin: 12px 0 5px; }
+  header h3 { @include header-font(20px); }
+
+  section { padding: 20px 20px 0; }
+  section h3 { padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px dashed $border-color; }
+}
+
+.links {
+  ul { @include clear-after; text-align: center; }
+  ul li { @include inline-block; float: left; width: 100px; padding: 10px 0; }
+
+  @media all and (max-width: 377px) {
+    ul li { float: none; width: 120px; padding: 20px 0; }
+  }
+
+  a { @include filter(grayscale(1)); @include inline-block; position: relative; height: 60px; }
+
+  a:active { top: 2px; }
+  a:hover { @include filter(grayscale(0)); }
+  a:hover strong { @include opacity(1); display: block; }
+
+  a strong:before {
+    @include transform(rotate(45deg));
+
+    top: -7px;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    content: ' ';
+    width: 16px;
+    height: 16px;
+    background: #000000;
+  }
+
+  a strong {
+    @include box-shadow(0px 0px 4px 2px #eeeeee);
+    @include opacity(0);
+    @include transition(opacity 0.2s);
+    @include border-radius(30px);
+    bottom: -55px;
+    position: absolute;
+    padding: 10px 20px;
+    white-space: nowrap;
+    background: #000000;
+    color: white;
+  }
+
+  a.github { background: url(/assets/icons.png) 0 0; width: 68px; }
+  a.github strong { left: -34px; }
+
+  a.twitter { background: url(/assets/icons.png) 0 -120px; width: 85px; }
+  a.twitter strong { left: -26px; }
+
+  a.speakerdeck { background: url(/assets/icons.png) 0 -60px; width: 74px; }
+  a.speakerdeck strong { left: -56px; }
+
+
+  a.slideshare { background: url(/assets/icons.png) 0 -180px; width: 60px; }
+  a.slideshare strong { left: -51px; }
+}
+
+.projects {
+  @include clearfix;
+
+  h4 { @include header-font(18px); padding: 5px 0 7px; }
+
+  a img { @include border-radius(100%); @include transition(all 0.2s); float: left; margin: 0 20px 10px 0; }
+  a:hover img { @include opacity(0.9); }
+  a:active img { @include transform(translatey(2px)); }
+}
+
