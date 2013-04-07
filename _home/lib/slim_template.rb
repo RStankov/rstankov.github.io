@@ -18,6 +18,8 @@ class SlimTemplate
   def compile_to(compile_dir)
     compile_dir = @root.join compile_dir
 
+    FileUtils.rm_f Dir[compile_dir.to_s + '/*.html']
+
     Dir[@root.join('views').to_s + '/*.slim'].each do |file_path|
       template = Tilt.new file_path
 

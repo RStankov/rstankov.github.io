@@ -18,6 +18,8 @@ class AssetPipeline < Sprockets::Environment
   def compile_to(compile_dir)
     compile_dir = @root.join compile_dir
 
+    FileUtils.rm_rf compile_dir
+
     Dir[@root.join('assets').to_s + '/**/*.*'].each do |bundle|
       assets = find_asset bundle
 
