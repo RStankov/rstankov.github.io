@@ -122,6 +122,9 @@ article {
 
   h4 { @include header-font(18px); padding: 5px 0 7px; }
 
+  div { min-height: 80px; clear: both; }
+  div + div { margin-top: 10px; }
+
   a img { @include border-radius(100%); @include transition(all 0.2s); float: left; margin: 0 20px 10px 0; }
   a:hover img { @include opacity(0.9); }
   a:active img { @include transform(translatey(2px)); }

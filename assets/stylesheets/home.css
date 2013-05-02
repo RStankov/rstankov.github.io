@@ -232,6 +232,11 @@ article {
     line-height: 20px;
     text-shadow: 1px 1px 1px white;
     padding: 5px 0 7px; }
+  .projects div {
+    min-height: 80px;
+    clear: both; }
+  .projects div + div {
+    margin-top: 10px; }
   .projects a img {
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
