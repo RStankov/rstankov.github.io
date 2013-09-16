@@ -27,3 +27,4 @@ task :compile do
   sprockets.compile_to '../assets'
 end
 
+task default: :compile
