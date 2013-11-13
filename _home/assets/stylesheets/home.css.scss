@@ -75,10 +75,10 @@ article {
     ul li { float: none; width: 120px; padding: 20px 0; }
   }
 
-  a { @include filter(grayscale(1)); @include inline-block; position: relative; height: 60px; }
+  a { @include filter(grayscale(1)); @include scale(0.8); @include inline-block; @include transition(all 0.2s); position: relative; height: 60px; }
 
   a:active { top: 2px; }
-  a:hover { @include filter(grayscale(0)); }
+  a:hover { @include filter(grayscale(0)); @include scale(1); }
   a:hover strong { @include opacity(1); display: block; }
 
   a strong:before {
@@ -97,7 +97,7 @@ article {
   a strong {
     @include box-shadow(0px 0px 4px 2px #eeeeee);
     @include opacity(0);
-    @include transition(opacity 0.2s);
+    @include transition(opacity 0.3s);
     @include border-radius(30px);
     bottom: -55px;
     position: absolute;
@@ -128,7 +128,7 @@ article {
   div { min-height: 80px; clear: both; }
   div + div { margin-top: 10px; }
 
-  a img { @include border-radius(100%); @include transition(all 0.4s); float: left; margin: 0 20px 10px 0; }
+  a img { @include border-radius(100%); @include transition(all 0.2s); float: left; margin: 0 20px 10px 0; }
   a:hover img { @include opacity(0.7); }
   a:active img { @include transform(translatey(2px)); }
 }
