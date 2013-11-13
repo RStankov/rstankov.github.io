@@ -119,6 +119,9 @@ article {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px dashed silver; }
+  @media all and (max-width: 460px) {
+    article header h2 {
+      display: none; } }
 
 .links ul {
   *zoom: 1;
