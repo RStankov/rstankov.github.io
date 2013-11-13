@@ -116,7 +116,6 @@ article {
   a.speakerdeck { background: image-url("icons.png") 0 -60px; width: 74px; }
   a.speakerdeck strong { left: -56px; }
 
-
   a.slideshare { background: image-url("icons.png") 0 -180px; width: 60px; }
   a.slideshare strong { left: -51px; }
 }
@@ -129,7 +128,7 @@ article {
   div { min-height: 80px; clear: both; }
   div + div { margin-top: 10px; }
 
-  a img { @include border-radius(20%); @include transition(all 0.2s); float: left; margin: 0 20px 10px 0; }
+  a img { @include border-radius(100%); @include transition(all 0.4s); float: left; margin: 0 20px 10px 0; }
   a:hover img { @include opacity(0.7); }
   a:active img { @include transform(translatey(2px)); }
 }
