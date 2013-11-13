@@ -28,6 +28,20 @@
   }
 }
 
+@mixin cool-hover {
+  @include filter(grayscale(1));
+  @include scale(0.8);
+  @include transition(all 0.2s);
+
+  position: relative;
+  outline: none;
+
+  &:hover,
+  &:focus { @include filter(grayscale(0)); @include scale(1); }
+
+  &:active { top: 4px; }
+}
+
 $border-color: silver;
 $content-color: #fefffe;
 $header-color: #e6efff;
@@ -75,11 +89,10 @@ article {
     ul li { float: none; width: 120px; padding: 20px 0; }
   }
 
-  a { @include filter(grayscale(1)); @include scale(0.8); @include inline-block; @include transition(all 0.2s); position: relative; height: 60px; }
+  a { @include cool-hover; @include inline-block; height: 60px; }
 
-  a:active { top: 2px; }
-  a:hover { @include filter(grayscale(0)); @include scale(1); }
-  a:hover strong { @include opacity(1); display: block; }
+  a:hover strong,
+  a:focus strong { @include opacity(1); display: block; }
 
   a strong:before {
     @include transform(rotate(45deg));
@@ -128,8 +141,6 @@ article {
   div { min-height: 80px; clear: both; }
   div + div { margin-top: 10px; }
 
-  a img { @include border-radius(100%); @include transition(all 0.2s); float: left; margin: 0 20px 10px 0; }
-  a:hover img { @include opacity(0.7); }
-  a:active img { @include transform(translatey(2px)); }
+  a img { @include cool-hover; @include border-radius(100%); float: left; margin: 0 10px 10px 0; }
 }
 
