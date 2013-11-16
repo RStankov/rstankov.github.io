@@ -67,7 +67,7 @@ article {
   border: 1px solid #eeeeee;
 
   header { @include clearfix; @include border-radius(5px 5px 0 0); padding: 20px; background: $header-color; border-bottom: 1px solid $border-color; }
-  header img { @include border-radius(100%); @include box-shadow(0px 0px 1px 5px rgba(255, 255, 255, 0.6)); float: left; margin-right: 18px; }
+  header img { @include border-radius(100%); @include box-shadow(0 0 3px #555555); float: left; margin-right: 18px; }
 
   header h1 { @include header-font(30px); margin-top: 20px; }
   header h2 { @include header-font(18px); margin: 12px 0 5px; }

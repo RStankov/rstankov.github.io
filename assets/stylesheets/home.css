@@ -91,9 +91,9 @@ article {
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
     border-radius: 100%;
-    -webkit-box-shadow: 0px 0px 1px 5px rgba(255, 255, 255, 0.6);
-    -moz-box-shadow: 0px 0px 1px 5px rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 0px 1px 5px rgba(255, 255, 255, 0.6);
+    -webkit-box-shadow: 0 0 3px #555555;
+    -moz-box-shadow: 0 0 3px #555555;
+    box-shadow: 0 0 3px #555555;
     float: left;
     margin-right: 18px; }
   article header h1 {
