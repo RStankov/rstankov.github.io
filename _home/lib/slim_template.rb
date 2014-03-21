@@ -32,6 +32,7 @@ class SlimTemplate
   private
 
   def find_template(path)
+    path = File.basename path, '.html'
     @trail.find "#{path == '/' ? 'index' : path}.slim"
   end
 end
