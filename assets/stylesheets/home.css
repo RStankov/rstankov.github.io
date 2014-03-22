@@ -289,3 +289,19 @@ article {
       transform: scale(1, 1); }
     .projects a img:active {
       top: 4px; }
+
+.project-4beats header img {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px; }
+.project-4beats div {
+  text-align: center; }
+.project-4beats div img {
+  width: 95%;
+  margin-top: 10px;
+  border: 1px solid black; }

@@ -144,3 +144,8 @@ article {
   a img { @include cool-hover; @include border-radius(100%); float: left; margin: 0 10px 10px 0; }
 }
 
+.project-4beats {
+  header img { @include box-shadow(none); @include border-radius(0px); }
+  div { text-align: center; }
+  div img { width: 95%; margin-top: 10px; border: 1px solid black; }
+}

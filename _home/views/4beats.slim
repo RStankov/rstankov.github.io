@@ -1,0 +1,42 @@
+doctype html
+
+html
+  meta charset="utf-8"
+
+  title Radoslav Stankov
+
+  link href="/assets/stylesheets/home.css" media="screen" rel="stylesheet" type="text/css"
+
+  meta name="robots" content="index,follow,noydir,noodp"
+  meta name="viewport" content="initial-scale = 1.0"
+  meta name="description" content="iOS7 Loop Sequencer app."
+
+  meta property="og:site_name" content="Radoslav stankov"
+  meta property="copyright" content="(c) #{Date.today.year} Copyright: Radoslav Stankov"
+  meta property="og:title" content="4Beats"
+  meta property="og:type" content="website"
+  meta property="og:url" content="http://rstankov.com/4beats.html"
+  meta property="og:image" content="http://rstankov.com/assets/images/4beats.png"
+  meta property="og:description" content="iOS7 Loop Sequencer app."
+
+  javascript:
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+  javascript:
+    try {
+      var pageTracker = _gat._getTracker("UA-11273010-1");
+      pageTracker._trackPageview();
+    } catch(err) {}
+
+  article.project-4beats
+    header
+      img src="/assets/images/4beats.png" alt="4Beats" width="100"
+      h1 4Beats app
+      h2 Legacy project
+
+    div
+      - %w(cover screenshot_1 screenshot_2 screenshot_3 screenshot_4).map { |s| "/assets/images/4beats/#{s}.png" }.each do |path|
+        a href="#{path}" target="_blank"
+          img src="#{path}"
+
