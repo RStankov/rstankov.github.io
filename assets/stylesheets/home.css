@@ -271,11 +271,6 @@ article {
     transition: all 0.2s;
     position: relative;
     outline: none;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
-    border-radius: 100%;
     float: left;
     margin: 0 10px 10px 0; }
     .projects a img:hover, .projects a img:focus {

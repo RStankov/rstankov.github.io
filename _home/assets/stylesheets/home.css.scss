@@ -141,7 +141,7 @@ article {
   div { min-height: 80px; clear: both; }
   div + div { margin-top: 10px; }
 
-  a img { @include cool-hover; @include border-radius(100%); float: left; margin: 0 10px 10px 0; }
+  a img { @include cool-hover; float: left; margin: 0 10px 10px 0; }
 }
 
 .project-4beats {
