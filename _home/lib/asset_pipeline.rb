@@ -20,15 +20,14 @@ class AssetPipeline < Sprockets::Environment
 
     FileUtils.rm_rf compile_dir
 
-    Dir[@root.join('assets').to_s + '/**/*.*'].each do |bundle|
-      assets = find_asset bundle
+    assets_path = @root.join 'assets'
+    Dir["#{assets_path}/**/*.*"].each do |bundle|
+      find_asset(bundle).to_a.each do |asset|
+        dirname  = compile_dir.join asset.pathname.dirname.to_s.gsub("#{assets_path}/", '')
+        basename = asset.pathname.basename.to_s.split('.')[0..1].join('.')
 
-      prefix, basename = assets.pathname.to_s.split('/')[-2..-1]
-      FileUtils.mkpath compile_dir.join(prefix)
-
-      assets.to_a.each do |asset|
-        real_name = asset.pathname.basename.to_s.split(".")[0..1].join(".")
-        asset.write_to compile_dir.join(prefix, real_name)
+        FileUtils.mkpath compile_dir.join(dirname)
+        asset.write_to compile_dir.join(dirname, basename)
       end
     end
   end
