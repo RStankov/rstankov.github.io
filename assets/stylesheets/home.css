@@ -300,3 +300,9 @@ article {
   width: 95%;
   margin-top: 10px;
   border: 1px solid black; }
+.project-4beats div p {
+  margin: 20px 5px 0 5px;
+  padding: 20px 2px 0px 2px;
+  border-top: 1px solid gray;
+  color: gray;
+  font-size: 0.9em; }
