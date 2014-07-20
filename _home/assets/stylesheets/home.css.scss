@@ -146,6 +146,9 @@ article {
 
 .project-4beats {
   header img { @include box-shadow(none); @include border-radius(0px); }
+
+  header h2 { @include border-radius(5px); @include inline-block; @include text-shadow(none); padding: 4px 6px; background: #fc3607; color: white; font-weight: lighter; }
+
   div { text-align: center; }
   div img { width: 95%; margin-top: 10px; border: 1px solid black; }
   div p { margin: 20px 5px 0 5px; padding: 20px 2px 0px 2px; border-top: 1px solid gray; color: gray; font-size: 0.9em; }
