@@ -89,7 +89,13 @@ article {
     ul li { float: none; width: 120px; padding: 20px 0; }
   }
 
-  a { @include cool-hover; @include inline-block; height: 60px; }
+  a {
+    @include cool-hover;
+    @include inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px;
+  }
 
   a:hover strong,
   a:focus strong { @include opacity(1); display: block; }
@@ -120,13 +126,13 @@ article {
     color: white;
   }
 
-  a.github { background: image-url("icons.png") 0 0; width: 68px; }
+  a.github { background-image: image-url("github.svg"); width: 80px; height: 80px; }
   a.github strong { left: -34px; }
 
-  a.twitter { background: image-url("icons.png") 0 -120px; width: 85px; }
+  a.twitter { background-image: image-url("twitter.svg"); width: 80px; height: 80px; }
   a.twitter strong { left: -26px; }
 
-  a.speakerdeck { background: image-url("icons.png") 0 -60px; width: 74px; }
+  a.speakerdeck { background-image: image-url("speaker_deck.svg"); width: 80px; height: 80px; }
   a.speakerdeck strong { left: -56px; }
 
   a.slideshare { background: image-url("icons.png") 0 -180px; width: 60px; }
