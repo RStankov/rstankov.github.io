@@ -169,6 +169,8 @@ article {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 60px; }
   .links a:hover, .links a:focus {
     -webkit-filter: grayscale(0);
@@ -222,25 +224,29 @@ article {
   background: #000000;
   color: white; }
 .links a.github {
-  background: url(/assets/images/icons.png) 0 0;
-  width: 68px; }
+  background-image: url(/assets/images/github.svg);
+  width: 80px;
+  height: 80px; }
 .links a.github strong {
   left: -34px; }
 .links a.twitter {
-  background: url(/assets/images/icons.png) 0 -120px;
-  width: 85px; }
+  background-image: url(/assets/images/twitter.svg);
+  width: 80px;
+  height: 80px; }
 .links a.twitter strong {
   left: -26px; }
 .links a.speakerdeck {
-  background: url(/assets/images/icons.png) 0 -60px;
-  width: 74px; }
+  background-image: url(/assets/images/speaker_deck.svg);
+  width: 80px;
+  height: 80px; }
 .links a.speakerdeck strong {
   left: -56px; }
-.links a.slideshare {
-  background: url(/assets/images/icons.png) 0 -180px;
-  width: 60px; }
-.links a.slideshare strong {
-  left: -51px; }
+.links a.ghost {
+  background-image: url(/assets/images/ghost.svg);
+  width: 80px;
+  height: 80px; }
+.links a.ghost strong {
+  left: -10px; }
 
 .projects {
   overflow: hidden;
