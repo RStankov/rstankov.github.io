@@ -94,7 +94,9 @@ article {
     @include inline-block;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 60px;
     height: 60px;
+    width: 60px;
   }
 
   a:hover strong,
@@ -126,23 +128,23 @@ article {
     color: white;
   }
 
-  a.github { background-image: image-url("github.svg"); width: 80px; height: 80px; }
-  a.github strong { left: -34px; }
+  a.ghost { background-image: image-url("ghost.svg"); }
+  a.ghost strong { left: -18px; }
 
-  a.twitter { background-image: image-url("twitter.svg"); width: 80px; height: 80px; }
-  a.twitter strong { left: -26px; }
+  a.github { background-image: image-url("github.svg"); }
+  a.github strong { left: -39px; }
 
-  a.speakerdeck { background-image: image-url("speaker_deck.svg"); width: 80px; height: 80px; }
-  a.speakerdeck strong { left: -56px; }
+  a.twitter { background-image: image-url("twitter.svg"); }
+  a.twitter strong { left: -36px; }
 
-  a.ghost { background-image: image-url("ghost.svg"); width: 80px; height: 80px; }
-  a.ghost strong { left: -10px; }
+  a.speakerdeck { background-image: image-url("speaker_deck.svg"); }
+  a.speakerdeck strong { left: -63px; }
 }
 
 .projects {
   @include clearfix;
 
-  h4 { @include header-font(18px); padding: 5px 0 7px; }
+  h4 { @include header-font(18px); font-weight: bold; padding: 5px 0 7px; }
 
   div { min-height: 80px; clear: both; }
   div + div { margin-top: 10px; }
