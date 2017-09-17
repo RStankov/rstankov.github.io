@@ -1,1 +1,19 @@
-<svg width="80" height="81" viewBox="0 0 80 81" xmlns="http://www.w3.org/2000/svg"><g fill="#3D515B" fill-rule="evenodd"><path d="M.197 64.302H31.9v15.852H.197zM47.75 64.302h31.683v15.852H47.75zM.173 32.6h79.27v15.85H.173zM.197.898h47.56v15.85H.196zM63.602.898h15.85v15.85h-15.85z"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="121px" height="123px" viewBox="0 0 121 123" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.6">
+        <g>
+            <g>
+                <rect fill="#000000" x="0" y="0" width="121" height="123" rx="4"></rect>
+                <rect fill="#E5EFF5" x="18" y="88" width="34" height="17" rx="4"></rect>
+                <rect fill="#E5EFF5" x="68" y="88" width="35" height="17" rx="4"></rect>
+                <rect fill="#E5EFF5" x="18" y="53" width="85" height="17" rx="4"></rect>
+                <rect fill="#E5EFF5" x="18" y="18" width="50" height="17" rx="4"></rect>
+                <rect fill="#E5EFF5" x="86" y="18" width="17" height="17" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

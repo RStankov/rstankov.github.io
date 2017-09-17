@@ -46,7 +46,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
   font-size: 16px;
   line-height: 18px;
   background: #d2d2d2 url(/assets/images/background.png); }
@@ -91,9 +91,9 @@ article {
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
     border-radius: 100%;
-    -webkit-box-shadow: 0 0 3px #555555;
-    -moz-box-shadow: 0 0 3px #555555;
-    box-shadow: 0 0 3px #555555;
+    -webkit-box-shadow: 0 0 3px #999999;
+    -moz-box-shadow: 0 0 3px #999999;
+    box-shadow: 0 0 3px #999999;
     float: left;
     margin-right: 18px; }
   article header h1 {
@@ -101,6 +101,7 @@ article {
     font-size: 30px;
     line-height: 32px;
     text-shadow: 1px 1px 1px white;
+    font-weight: bold;
     margin-top: 20px; }
   article header h2 {
     font-family: "Lucida Grande", Arial, sans-serif;
@@ -118,7 +119,8 @@ article {
   article section h3 {
     padding-bottom: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px dashed silver; }
+    border-bottom: 1px dashed silver;
+    font-weight: bold; }
   @media all and (max-width: 460px) {
     article header h2 {
       display: none; } }
@@ -157,10 +159,11 @@ article {
   -ms-transform: scale(0.8, 0.8);
   -o-transform: scale(0.8, 0.8);
   transform: scale(0.8, 0.8);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all ease-out;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition: all ease-out 0.2s;
+  -o-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
   position: relative;
   outline: none;
   display: -moz-inline-stack;
@@ -171,16 +174,18 @@ article {
   *display: inline;
   background-repeat: no-repeat;
   background-position: center;
-  height: 60px; }
+  background-size: 60px;
+  height: 60px;
+  width: 60px; }
   .links a:hover, .links a:focus {
     -webkit-filter: grayscale(0);
     -moz-filter: grayscale(0);
     filter: grayscale(0);
-    -webkit-transform: scale(1, 1);
-    -moz-transform: scale(1, 1);
-    -ms-transform: scale(1, 1);
-    -o-transform: scale(1, 1);
-    transform: scale(1, 1); }
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    -o-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2); }
   .links a:active {
     top: 4px; }
 .links a:hover strong,
@@ -208,10 +213,10 @@ article {
   box-shadow: 0px 0px 4px 2px #eeeeee;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  -moz-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
@@ -223,30 +228,22 @@ article {
   white-space: nowrap;
   background: #000000;
   color: white; }
-.links a.github {
-  background-image: url(/assets/images/github.svg);
-  width: 80px;
-  height: 80px; }
-.links a.github strong {
-  left: -34px; }
-.links a.twitter {
-  background-image: url(/assets/images/twitter.svg);
-  width: 80px;
-  height: 80px; }
-.links a.twitter strong {
-  left: -26px; }
-.links a.speakerdeck {
-  background-image: url(/assets/images/speaker_deck.svg);
-  width: 80px;
-  height: 80px; }
-.links a.speakerdeck strong {
-  left: -56px; }
 .links a.ghost {
-  background-image: url(/assets/images/ghost.svg);
-  width: 80px;
-  height: 80px; }
+  background-image: url(/assets/images/ghost.svg); }
 .links a.ghost strong {
-  left: -10px; }
+  left: -18px; }
+.links a.github {
+  background-image: url(/assets/images/github.svg); }
+.links a.github strong {
+  left: -39px; }
+.links a.twitter {
+  background-image: url(/assets/images/twitter.svg); }
+.links a.twitter strong {
+  left: -36px; }
+.links a.speakerdeck {
+  background-image: url(/assets/images/speaker_deck.svg); }
+.links a.speakerdeck strong {
+  left: -63px; }
 
 .projects {
   overflow: hidden;
@@ -256,6 +253,7 @@ article {
     font-size: 18px;
     line-height: 20px;
     text-shadow: 1px 1px 1px white;
+    font-weight: bold;
     padding: 5px 0 7px; }
   .projects div {
     min-height: 80px;
@@ -271,10 +269,11 @@ article {
     -ms-transform: scale(0.8, 0.8);
     -o-transform: scale(0.8, 0.8);
     transform: scale(0.8, 0.8);
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
+    -webkit-transition: all ease-out;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition: all ease-out 0.2s;
+    -o-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
     position: relative;
     outline: none;
     float: left;
@@ -283,11 +282,11 @@ article {
       -webkit-filter: grayscale(0);
       -moz-filter: grayscale(0);
       filter: grayscale(0);
-      -webkit-transform: scale(1, 1);
-      -moz-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-      -o-transform: scale(1, 1);
-      transform: scale(1, 1); }
+      -webkit-transform: scale(1.2, 1.2);
+      -moz-transform: scale(1.2, 1.2);
+      -ms-transform: scale(1.2, 1.2);
+      -o-transform: scale(1.2, 1.2);
+      transform: scale(1.2, 1.2); }
     .projects a img:active {
       top: 4px; }
 
