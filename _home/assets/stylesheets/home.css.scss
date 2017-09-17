@@ -3,7 +3,7 @@
 @import "compass/utilities/general/clearfix";
 
 @mixin text-font($size) {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
   font-size: $size;
   line-height: $size+2;
 }
@@ -31,13 +31,13 @@
 @mixin cool-hover {
   @include filter(grayscale(1));
   @include scale(0.8);
-  @include transition(all 0.2s);
+  @include transition(all ease-out 0.2s);
 
   position: relative;
   outline: none;
 
   &:hover,
-  &:focus { @include filter(grayscale(0)); @include scale(1); }
+  &:focus { @include filter(grayscale(0)); @include scale(1.2); }
 
   &:active { top: 4px; }
 }
@@ -67,14 +67,14 @@ article {
   border: 1px solid #eeeeee;
 
   header { @include clearfix; @include border-radius(5px 5px 0 0); padding: 20px; background: $header-color; border-bottom: 1px solid $border-color; }
-  header img { @include border-radius(100%); @include box-shadow(0 0 3px #555555); float: left; margin-right: 18px; }
+  header img { @include border-radius(100%); @include box-shadow(0 0 3px #999); float: left; margin-right: 18px; }
 
-  header h1 { @include header-font(30px); margin-top: 20px; }
+  header h1 { @include header-font(30px); font-weight: bold; margin-top: 20px; }
   header h2 { @include header-font(18px); margin: 12px 0 5px; }
   header h3 { @include header-font(20px); }
 
   section { padding: 20px 20px 0; }
-  section h3 { padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px dashed $border-color; }
+  section h3 { padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px dashed $border-color; font-weight: bold; }
 
   @media all and (max-width: 460px) {
     header h2 { display: none; }
@@ -118,7 +118,7 @@ article {
   a strong {
     @include box-shadow(0px 0px 4px 2px #eeeeee);
     @include opacity(0);
-    @include transition(opacity 0.3s);
+    @include transition(opacity 0.2s);
     @include border-radius(30px);
     bottom: -55px;
     position: absolute;
